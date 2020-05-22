@@ -1,13 +1,71 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Sin Graph</title>
 </head>
-<body>
+<style>
+    #canvas-container{
+        width: 100%;
+        text-align: center;
+    }
 
+    canvas {
+        width:75%;
+        height: 25%;       
+        /* border-style: solid;
+        border-color: steelblue; */
+        margin: 0 auto;
+    }
+
+    ul {
+        width: 50%;
+        padding: 0;
+        margin: 1rem auto;
+    }
+
+    li {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0.25rem;
+    }
+
+    label {
+        padding-right: 0.25rem ;
+    }
+
+    #draw{
+        width: 147px;
+        margin-top: 0.75rem;
+    }
+
+</style>
+<body>
+    <div id="canvas-container">
+        <canvas id="graph"></canvas>
+    </div>      
+    <ul id="input-container">
+        <li>
+            <label for="amplitudeInput">Enter Amplitude:</label>
+            <input id="amplitudeInput" type="number">
+        </li>
+        <li>
+            <label for="frequencyInput">Enter Frequency:</label>
+            <input id="frequencyInput" type="number">
+        </li>
+        <li>
+            <input id="draw" type="button" value="draw">
+        </li>
+    </ul>
+    
+    <script type="module">
+        import { MyClass } from "./src/index.js";
+        let myClass = new MyClass();
+    </script>
 </body>
 </html>
