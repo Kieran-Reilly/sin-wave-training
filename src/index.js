@@ -1,6 +1,6 @@
 // import files you want part of your library here.
-import {MyClass} from "./my-class.js"
+import {GraphPlotter} from "./graph-plotter.js"
 
 
 // export your api here.
-export {MyClass}
+export {GraphPlotter}
